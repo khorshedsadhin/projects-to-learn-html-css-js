@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: aliceblue;
+    font-family: sans-serif;
+}
+
+.btn {
+    background-color: pink;
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+    /* to remove line under button we are using text-decoration none */
+    text-decoration: none;
+    color: black;
+    /* .btn::before needs to be absolute thats why parents are relative */
+    position: relative;
+    overflow: hidden;
+}
+
+.btn span {
+    /* button text needs to stay on top of everything else */
+    position: relative;
+    z-index: 1;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    background-color: orangered;
+    /* width height 0 because we just want transition after hovering but dont want to actually see the element */
+    width: 0px;
+    height: 0px;
+    /* bring it to where mouse cursor is */
+    left: var(--xPos);
+    top: var(--yPos);
+    transform: translate(-50%, -50%);
+    /* made it a circle. now we need to increase its size when hovering */
+    border-radius: 50%;
+    /* now a smooth transition is needed to bring that ripple effect */
+    transition: width .5s, height .5s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
