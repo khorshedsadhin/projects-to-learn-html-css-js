@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(213,225,239);
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.card {
+    height: 500px;
+    width: 320px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+h2 {
+    color: rgb(55,62,87);
+}
+
+.paragraph {
+    color: rgb(160,164,173);
+    padding: 10px;
+    padding-top: 0;
+}
+
+.card:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
