@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.parent {
+    padding: 10px;
+    background-color: indianred;
+    display: flex;
+}
+
+.parent span {
+    background-color: cadetblue;
+}
+
+.parent p {
+    background-color: darkkhaki;
+    margin: 0;
+}
+
+.parent a {
+    background-color: yellowgreen;
+}
