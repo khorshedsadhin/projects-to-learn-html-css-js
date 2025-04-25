@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-color: #111;
+    padding: 20px;
+}
+#box {
+    height: 300px;
+    width: 300px;
+    background-color: crimson;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+
+    animation-name: move;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move {
+    0% {
+        left: 0;
+        top: 10px;
+        rotate: 0;
+    }
+    50% {
+        left: 75%;
+        top: 10px;
+        rotate: 180deg;
+        background-color: green;
+    }
+    100% {
+        left: 75%;
+        top: 50%;
+        rotate: 360deg;
+        background-color: blue;
+    }
+}
